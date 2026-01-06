@@ -9,12 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-
-@Composable
-fun TaskItemScreen() {
-
-    // TODO 1: Create a mutable state to hold completion status (Boolean)
-    // Initial value should be false
+            
 
     @Composable
 fun TaskItemScreen() {
@@ -28,19 +23,17 @@ fun TaskItemScreen() {
         )
 
 
-    Column(modifier = Modifier.padding(16.dp)) {
-
-        Text(
-            text = "Submit Final Project",
-            style = MaterialTheme.typography.titleLarge
-        )
 
         // TODO 2: Show text "Completed" or "Not Completed"
         // depending on completion state
-
+        Text(
+            text = if (isCompleted) "Completed" else "Not Completed",
+            color = if (isCompleted) Color.Green else Color.Red
+        )
         Button(
             onClick = {
                 // TODO 3: Toggle completion state
+                 isCompleted = !isCompleted
             }
         ) {
             Text("Change Status")
