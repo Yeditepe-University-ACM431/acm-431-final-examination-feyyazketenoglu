@@ -22,8 +22,6 @@ fun TaskItemScreen() {
             style = MaterialTheme.typography.titleLarge
         )
 
-
-
         // TODO 2: Show text "Completed" or "Not Completed"
         // depending on completion state
         Text(
