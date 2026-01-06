@@ -16,6 +16,18 @@ fun TaskItemScreen() {
     // TODO 1: Create a mutable state to hold completion status (Boolean)
     // Initial value should be false
 
+    @Composable
+fun TaskItemScreen() {
+    // TODO 1: Create a mutable state to hold completion status (Boolean)
+    var isCompleted by remember { mutableStateOf(false) }
+
+    Column(modifier = Modifier.padding(16.dp)) {
+        Text(
+            text = "Submit Final Project",
+            style = MaterialTheme.typography.titleLarge
+        )
+
+
     Column(modifier = Modifier.padding(16.dp)) {
 
         Text(
